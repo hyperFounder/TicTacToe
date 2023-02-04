@@ -95,7 +95,20 @@ public class HelloController {
         }
 
     }
-    
+
+    @FXML
+    protected void reset()
+    {
+        topMiddle.setText("");
+        topLeft.setText("");
+        topRight.setText("");
+        midLeft.setText("");
+        midRight.setText("");
+        middle.setText("");
+        botLeft.setText("");
+        bottomMiddle.setText("");
+        botRight.setText("");
+    }
 
     @FXML
     protected void ExitApp()
