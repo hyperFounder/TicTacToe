@@ -9,6 +9,12 @@
 
 
 <?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
 <GridPane fx:controller="com.example.mytictactoe.HelloController" xmlns:fx="http://javafx.com/fxml"
           alignment="CENTER"
           hgap="10" vgap="10" gridLinesVisible="false" stylesheets="@styles.css">
@@ -35,4 +41,13 @@
     <Button fx:id="botRight" GridPane.rowIndex="2" GridPane.columnIndex="2" prefWidth="50.0" prefHeight="50"
     />
 
+
+    <Button fx:id="exiting" text="exit" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+    <Button fx:id="reset" text="reset" GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+    <Button fx:id="Player1" text= "P1" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+    <Button fx:id="Player2" text= "P2" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+
 </GridPane>
+
+
