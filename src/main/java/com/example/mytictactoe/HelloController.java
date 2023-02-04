@@ -32,6 +32,16 @@ public class HelloController {
     private boolean setP1 = false;
     private boolean setP2 = false;
 
+    private int topL = 3;
+    private int topMid= 3;
+    private int topR = 3;
+    private int midMid;
+    private int mid;
+    private int midR;
+    private int botL;
+    private int botMid;
+    private int botR;
+
 
     private void alternate()
     {
@@ -39,11 +49,12 @@ public class HelloController {
        {
            p = "O";
        }
-       else
-       {
+       else {
            p = "X";
        }
     }
+
+
 
     @FXML
     protected void buttonClicked(ActionEvent event)
@@ -51,18 +62,53 @@ public class HelloController {
         if (event.getSource().equals(topLeft))
         {
             topLeft.setText(p);
+            if (p.equals("X"))
+            {
+                topL = 0;
+            }
+            else
+            {
+                topL = 1;
+            }
             alternate();
+            isWinning();
+
         }
         if (event.getSource().equals(topRight))
         {
             topRight.setText(p);
+            if (p.equals("X"))
+            {
+                topR = 0;
+            }
+            else
+            {
+                topR = 1;
+            }
             alternate();
+            isWinning();
+
+
         }
         if (event.getSource().equals(topMiddle))
         {
             topMiddle.setText(p);
+            if (p.equals("X"))
+            {
+                topMid = 0;
+            }
+            else
+            {
+                topMid = 1;
+            }
             alternate();
+            isWinning();
         }
+
+
+
+
+
         if (event.getSource().equals(midLeft))
         {
             midLeft.setText(p);
@@ -110,6 +156,15 @@ public class HelloController {
         botRight.setText("");
     }
 
+
+    private void isWinning()
+    {
+        if (topL == 0 && topR == 0 && topMid == 0)
+        {
+            System.out.println("Player X wins");
+        }
+
+    }
     @FXML
     protected void ExitApp()
     {
