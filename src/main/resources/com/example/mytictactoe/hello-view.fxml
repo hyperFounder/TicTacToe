@@ -5,12 +5,34 @@
 <?import javafx.scene.layout.VBox?>
 
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.mytictactoe.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.layout.GridPane?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+
+<?import javafx.scene.layout.ColumnConstraints?>
+<GridPane fx:controller="com.example.mytictactoe.HelloController" xmlns:fx="http://javafx.com/fxml"
+          alignment="CENTER"
+          hgap="10" vgap="10" gridLinesVisible="false" stylesheets="@styles.css">
+
+
+    <Button fx:id="topLeft" GridPane.rowIndex="0" GridPane.columnIndex="0" prefWidth="50.0" prefHeight="50"
+            alignment="CENTER"
+    />
+
+    <Button fx:id="topMiddle" GridPane.rowIndex="0" GridPane.columnIndex="1" prefWidth="50.0" prefHeight="50"
+    />
+    <Button fx:id="topRight" GridPane.rowIndex="0" GridPane.columnIndex="2" prefWidth="50.0" prefHeight="50"
+    />
+    <Button fx:id="midLeft" GridPane.rowIndex="1" GridPane.columnIndex="0" prefWidth="50.0" prefHeight="50"
+    />
+    <Button fx:id="middle" GridPane.rowIndex="1" GridPane.columnIndex="1" prefWidth="50.0" prefHeight="50"
+    />
+    <Button fx:id="midRight" GridPane.rowIndex="1" GridPane.columnIndex="2" prefWidth="50.0" prefHeight="50"
+    />
+    <Button fx:id="botLeft" GridPane.rowIndex="2" GridPane.columnIndex="0" prefWidth="50.0" prefHeight="50"
+    />
+    <Button fx:id="bottomMiddle" GridPane.rowIndex="2" GridPane.columnIndex="1" prefWidth="50.0" prefHeight="50"
+    />
+    <Button fx:id="botRight" GridPane.rowIndex="2" GridPane.columnIndex="2" prefWidth="50.0" prefHeight="50"
+    />
+
+</GridPane>
