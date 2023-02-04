@@ -42,7 +42,7 @@
     />
 
 
-    <Button fx:id="exiting" text="exit" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+    <Button fx:id="exiting" text="exit" GridPane.columnIndex="3" GridPane.rowIndex="2" onAction="#ExitApp"/>
     <Button fx:id="reset" text="reset" GridPane.columnIndex="3" GridPane.rowIndex="1"/>
     <Button fx:id="Player1" text= "P1" GridPane.columnIndex="0" GridPane.rowIndex="4" />
     <Button fx:id="Player2" text= "P2" GridPane.columnIndex="1" GridPane.rowIndex="4" />
