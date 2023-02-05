@@ -15,6 +15,8 @@
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.control.DialogPane?>
 <GridPane fx:controller="com.example.mytictactoe.HelloController" xmlns:fx="http://javafx.com/fxml"
           alignment="CENTER"
           hgap="10" vgap="10" gridLinesVisible="false" stylesheets="@styles.css">
@@ -44,8 +46,37 @@
 
     <Button fx:id="exiting" text="exit" GridPane.columnIndex="3" GridPane.rowIndex="2" onAction="#ExitApp"/>
     <Button fx:id="reset" text="reset" GridPane.columnIndex="3" GridPane.rowIndex="1" onAction="#reset"/>
-    <Button fx:id="Player1" text= "P1" GridPane.columnIndex="0" GridPane.rowIndex="4" />
-    <Button fx:id="Player2" text= "P2" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+    <Button fx:id="Player1" text= "P1" GridPane.columnIndex="0" GridPane.rowIndex="4" onAction="#player1Score"/>
+    <Button fx:id="Player2" text= "P2" GridPane.columnIndex="1" GridPane.rowIndex="4" onAction="#player2Score"/>
+
+
+    <Label fx:id="player1ButtonPressed" alignment="TOP_RIGHT" GridPane.columnIndex="3" GridPane.rowIndex="0" textFill="white">
+        <font>
+            <Font name="Monaco" size="12"></Font>
+        </font>
+    </Label>
+    <Label fx:id="player2ButtonPressed" alignment="TOP_RIGHT" GridPane.columnIndex="3" GridPane.rowIndex="0" textFill="white">
+        <font>
+            <Font name="Monaco" size="12"></Font>
+        </font>
+    </Label>
+
+    <Label fx:id="player1Score" GridPane.columnIndex="2" GridPane.rowIndex="4" textFill="white">
+        <font>
+            <Font name="Monaco" size="12"></Font>
+        </font>
+    </Label>
+    <Label fx:id="player2Score" GridPane.columnIndex="2" GridPane.rowIndex="4" textFill="white">
+        <font>
+            <Font name="Monaco" size="12"></Font>
+        </font>
+    </Label>
+    <Label fx:id="CountDown" GridPane.columnIndex="1" GridPane.rowIndex="11" textFill="white">
+        <font>
+            <Font name="Monaco" size="10"></Font>
+        </font>
+    </Label>
+
 
 
 </GridPane>
